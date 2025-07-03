@@ -1,5 +1,6 @@
 @localhost=localhost:4004/odata/v4/main
 @id=4d5ae66d-f718-4e60-b390-85d0f5831731
+@customerId=4d5ae66d-f718-4e60-b390-85d0f5831731
 
 GET http://{{localhost}}/SalesOrderHeaders
 Content-Type: application/json
@@ -10,11 +11,13 @@ POST http://{{localhost}}/SalesOrderHeaders
 Content-Type: application/json
 
 {
+    "id": "{{id}}",
+    "customer_id": "{{customerId}}"
 }
 
 ###
 
-DELETE http://{{localhost}}/SalesOrderHeaders(id=d9d219af-1dc2-4cff-8a2a-f59d2149b75f)
+DELETE http://{{localhost}}/SalesOrderHeaders(id={{id}})
 Content-Type: application/json
 
 {}
