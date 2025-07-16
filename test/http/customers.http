@@ -1,0 +1,42 @@
+@localhost=localhost:4004/odata/v4/main
+@id=4d5ae66d-f718-4e60-b390-85d0f5831731
+
+GET http://{{localhost}}/Customers
+Content-Type: application/json
+
+###
+
+POST http://{{localhost}}/Customers
+Content-Type: application/json
+
+{
+    "id": "{{id}}",
+    "firstName": "JEovanne",
+    "lastName": "Montebeller",
+    "email": "jberger@vports.com.br"
+}
+
+###
+
+DELETE http://{{localhost}}/Customers(id={{id}})
+Content-Type: application/json
+
+{}
+
+###
+
+PUT http://{{localhost}}/Customers(id={{id}})
+Content-Type: application/json
+
+{
+    "firstName": "Miguel"
+}
+
+###
+
+PATCH http://{{localhost}}/Customers(id={{id}})
+Content-Type: application/json
+
+{
+    "firstName": "Miguel"
+}
