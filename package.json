@@ -23,6 +23,6 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "dev": "cds watch"
+    "dev": "cds-tsx watch"
   }
 }
