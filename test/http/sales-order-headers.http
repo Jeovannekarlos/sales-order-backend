@@ -24,14 +24,14 @@ Authorization: Basic jeovanne:inicial@12345
             "header_id":"{{id}}",
             "product_id":"{{productId1}}",
             "quantity": 10,
-            "price": 2.99
+            "price": 1000
         },
         {
             "id": "77823c1f-1ae1-466d-9292-59da92bf301f",
             "header_id":"{{id}}",
             "product_id":"{{productId2}}",
             "quantity": 5,
-            "price": 1.99
+            "price": 5000
         }
         
     ]
