@@ -1,7 +1,7 @@
 @localhost=localhost:4004/odata/v4/main
-@id=4d5ae66d-f718-4e60-b390-85d0f5831731
-@customerId=25734040-9a21-4ebc-9562-f37a4d3aa86c
-@productId1=15842123-4557-4a3e-997d-c4e026813fd3
+@id=4d5ae66d-f718-4e60-b390-95e0f5831731
+@customerId=26368375-24eb-4f44-9385-d2f01da67856
+@productId1=22271539-21e5-4b0d-9f21-91fc1eedc2e0
 @productId2=22271538-8913-4c33-ad60-0d9e18723231
 
 GET http://{{localhost}}/SalesOrderHeaders
@@ -17,17 +17,17 @@ Authorization: Basic jeovanne:inicial@12345
 {
     "id": "{{id}}",
     "customer_id": "{{customerId}}",
-    "totalAmount": 398,
+    #"totalAmount": 398,
     "items": [
         {
-            "id": "0124aa1f-aa4e-44d0-b0ac-25cfdb6bd967",
+            "id": "0124aa1f-aa4e-44d0-c0ac-25cfdb6bd967",
             "header_id":"{{id}}",
-            "product_id":"{{productId2}}",
+            "product_id":"{{productId1}}",
             "quantity": 10,
             "price": 2.99
         },
         {
-            "id": "77823c1f-1ae1-466d-8292-59da92bf301f",
+            "id": "77823c1f-1ae1-466d-9292-59da92bf301f",
             "header_id":"{{id}}",
             "product_id":"{{productId2}}",
             "quantity": 5,

@@ -4,7 +4,7 @@ import { getMaxListeners } from 'events';
 
 export default (service :Service) => {
     service.before('READ', '*', (request: Request) => {
-        if (!request.user.is('read_only_user')){
+        if (!request.user.is('admin')){
             return request.reject(403, 'Não autorizado');
         }
     });
@@ -48,6 +48,11 @@ export default (service :Service) => {
                 return request.reject(400, `Produto ${dbProduct.name}(${dbProduct.id}) sem estoque disponível`);
             }
         }
+        let totalAmount = 0;
+        params.items.forEach((item: SalesOrderItem) => {
+            totalAmount += (item.price as number) * (item.quantity as number);
+        });
+        request.data.totalAmount = totalAmount;
     });
     service.after('CREATE', 'SalesOrderHeaders', async (results : SalesOrderHeaders) => {
         const headersAsArray = Array.isArray(results) ? results : [results] as SalesOrderHeaders;
