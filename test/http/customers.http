@@ -3,12 +3,13 @@
 
 GET http://{{localhost}}/Customers
 Content-Type: application/json
+Authorization: Basic miguel:inicial@12345
 
 ###
 
 POST http://{{localhost}}/Customers
 Content-Type: application/json
-
+Authorization: Basic miguel:inicial@12345
 {
     "id": "{{id}}",
     "firstName": "JEovanne",
@@ -20,14 +21,14 @@ Content-Type: application/json
 
 DELETE http://{{localhost}}/Customers(id={{id}})
 Content-Type: application/json
-
+Authorization: Basic miguel:inicial@12345
 {}
 
 ###
 
 PUT http://{{localhost}}/Customers(id={{id}})
 Content-Type: application/json
-
+Authorization: Basic miguel:inicial@12345
 {
     "firstName": "Miguel"
 }
@@ -36,7 +37,7 @@ Content-Type: application/json
 
 PATCH http://{{localhost}}/Customers(id={{id}})
 Content-Type: application/json
-
+Authorization: Basic miguel:inicial@12345
 {
     "firstName": "Miguel"
 }

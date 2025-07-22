@@ -6,11 +6,13 @@
 
 GET http://{{localhost}}/SalesOrderHeaders
 Content-Type: application/json
+Authorization: Basic miguel:inicial@12345
 
 ###
 
 POST http://{{localhost}}/SalesOrderHeaders
 Content-Type: application/json
+Authorization: Basic jeovanne:inicial@12345
 
 {
     "id": "{{id}}",
@@ -39,12 +41,13 @@ Content-Type: application/json
 
 DELETE http://{{localhost}}/SalesOrderHeaders(id={{id}})
 Content-Type: application/json
-
+Authorization: Basic miguel:inicial@12345
 {}
 
 ###
 
 PUT http://{{localhost}}/SalesOrderHeaders(id={{id}})
 Content-Type: application/json
+Authorization: Basic miguel:inicial@12345
 
 {}
